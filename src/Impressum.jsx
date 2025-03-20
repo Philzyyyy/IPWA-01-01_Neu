@@ -11,52 +11,60 @@ function Impressum() {
           <strong>Angaben gemäß § 5 TMG:</strong>
         </p>
         <p>
-          Carbon Metrics e.V.
+          Carbon Metrics
           <br />
           Musterstraße 12
           <br />
-          10115 Berlin
+          12345 Berlin
           <br />
           Deutschland
         </p>
 
         <h2 className="text-xl font-semibold mt-4">Vertreten durch:</h2>
-        <p>Max Mustermann (Vorstandsvorsitzender)</p>
+        <p>Philipp Zybala</p>
 
         <h2 className="text-xl font-semibold mt-4">Kontakt:</h2>
         <p>
-          Telefon: +49 (0)30 12345678
+          Telefon: +49 30 1234567
           <br />
           E-Mail:{" "}
-          <a href="mailto:info@carbonmetrics.org" className="text-blue-500">
-            info@carbonmetrics.org
+          <a href="mailto:info@co2-bilanz-info.de" className="text-blue-500">
+            info@Carbon-Metrics.de
           </a>
         </p>
 
         <h2 className="text-xl font-semibold mt-4">Registereintrag:</h2>
         <p>
-          Eintragung im Vereinsregister
+          Registergericht: Amtsgericht Berlin
           <br />
-          Registergericht: Amtsgericht Berlin-Charlottenburg
-          <br />
-          Registernummer: VR 123456
+          Registernummer: HRB 987654
         </p>
 
         <h2 className="text-xl font-semibold mt-4">Umsatzsteuer-ID:</h2>
-        <p>
-          Umsatzsteuer-Identifikationsnummer gemäß §27a Umsatzsteuergesetz:
-          DE123456789
-        </p>
+        <p>Umsatzsteuer-Identifikationsnummer gemäß §27a UStG: DE123456789</p>
 
         <h2 className="text-xl font-semibold mt-4">
           Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:
         </h2>
         <p>
-          Max Mustermann
+          Philipp Zybala
           <br />
-          Carbon Metrics e.V.
+          Musterstraße 12, 12345 Berlin
+        </p>
+
+        <h2 className="text-xl font-semibold mt-4">EU-Streitschlichtung:</h2>
+        <p>
+          Die Europäische Kommission stellt eine Plattform zur
+          Online-Streitbeilegung (OS) bereit:
           <br />
-          Musterstraße 12, 10115 Berlin
+          <a
+            href="https://ec.europa.eu/consumers/odr"
+            className="text-blue-500"
+          >
+            https://ec.europa.eu/consumers/odr
+          </a>
+          <br />
+          Unsere E-Mail-Adresse finden Sie oben im Impressum.
         </p>
 
         <h2 className="text-xl font-semibold mt-4">Haftungsausschluss:</h2>
@@ -66,18 +74,13 @@ function Impressum() {
           jedoch keine Gewähr übernehmen.
         </p>
 
-        <h2 className="text-xl font-semibold mt-4">Haftung für Links:</h2>
-        <p>
-          Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren
-          Inhalte wir keinen Einfluss haben. Deshalb können wir für diese
-          fremden Inhalte auch keine Gewähr übernehmen.
-        </p>
-
         <h2 className="text-xl font-semibold mt-4">Urheberrecht:</h2>
         <p>
           Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen
-          Seiten unterliegen dem deutschen Urheberrecht. Beiträge Dritter sind
-          als solche gekennzeichnet.
+          Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung,
+          Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der
+          Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des
+          jeweiligen Autors bzw. Erstellers.
         </p>
 
         <p className="mt-6">

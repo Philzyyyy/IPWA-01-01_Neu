@@ -60,7 +60,7 @@ function Co2Table() {
   return (
     <div className="max-w-3xl mx-auto p-6">
       <h2 className="text-2xl font-bold mb-4 text-center text-gray-700">
-        CO₂-Emissionen nach Ländern
+        CO₂-Emissionen nach Ländern oder Unternehmen
       </h2>
 
       {/* Filter-Input */}
@@ -78,13 +78,13 @@ function Co2Table() {
           className="px-4 py-2 mx-2 bg-blue-500 text-white rounded-lg hover:bg-blue-700"
           onClick={() => setSortOrder("asc")}
         >
-          A-Z
+          A-Z (Land)
         </button>
         <button
           className="px-4 py-2 mx-2 bg-red-500 text-white rounded-lg hover:bg-red-700"
           onClick={() => setSortOrder("desc")}
         >
-          Z-A
+          Z-A (Land)
         </button>
       </div>
 

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 function Navigation() {
   const [direction, setDirection] = useState("ltr"); // Standard: LTR
@@ -15,36 +16,33 @@ function Navigation() {
   }, []);
 
   return (
-    <>
-      <nav
-        className={`p-4 bg-gray-100 ${
-          direction === "rtl" ? "text-right" : "text-left"
-        }`}
+    <nav
+      className={`p-4 bg-gray-100 ${
+        direction === "rtl" ? "text-right" : "text-left"
+      }`}
+    >
+      <ul
+        className={`flex ${
+          direction === "rtl" ? "flex-row-reverse" : "flex-row"
+        } gap-6`}
       >
-        <ul className="flex gap-6">
-          <li>
-            <a href="#home" className="text-blue-600 hover:underline">
-              Home
-            </a>
-          </li>
-          <li>
-            <a href="#about" className="text-blue-600 hover:underline">
-              Über uns
-            </a>
-          </li>
-          <li>
-            <a href="#services" className="text-blue-600 hover:underline">
-              Services
-            </a>
-          </li>
-          <li>
-            <a href="#contact" className="text-blue-600 hover:underline">
-              Kontakt
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </>
+        <li>
+          <Link to="/" className="text-blue-600 hover:underline">
+            Home
+          </Link>
+        </li>
+        <li>
+          <Link to="/about" className="text-blue-600 hover:underline">
+            Über uns
+          </Link>
+        </li>
+        <li>
+          <Link to="/services" className="text-blue-600 hover:underline">
+            Services
+          </Link>
+        </li>
+      </ul>
+    </nav>
   );
 }
 
