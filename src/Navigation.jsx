@@ -6,7 +6,7 @@ function Navigation() {
 
   useEffect(() => {
     // Browsersprache abrufen (z. B. "ar" für Arabisch)
-    const userLang = navigator.language || navigator.userLanguage;
+    const userLang = "navigator.language || navigator.userLanguage;";
 
     // RTL-Sprachen definieren
     const rtlLanguages = ["ar", "he", "fa", "ur"];
@@ -16,32 +16,39 @@ function Navigation() {
   }, []);
 
   return (
-    <nav
-      className={`p-4 bg-gray-100 ${
-        direction === "rtl" ? "text-right" : "text-left"
-      }`}
-    >
-      <ul
-        className={`flex ${
-          direction === "rtl" ? "flex-row-reverse" : "flex-row"
-        } gap-6`}
+    <nav className="bg-gray-100 py-2 shadow-md">
+      <div
+        className={`container flex px-6 ${
+          direction === "rtl" ? "justify-end" : "justify-start"
+        }`}
       >
-        <li>
-          <Link to="/" className="text-blue-600 hover:underline">
-            Home
-          </Link>
-        </li>
-        <li>
-          <Link to="/about" className="text-blue-600 hover:underline">
-            Über uns
-          </Link>
-        </li>
-        <li>
-          <Link to="/services" className="text-blue-600 hover:underline">
-            Services
-          </Link>
-        </li>
-      </ul>
+        <ul className="flex gap-6">
+          <li>
+            <Link
+              to="/"
+              className="text-gray-900 text-opacity-80 backdrop-blur-md hover:underline"
+            >
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/about"
+              className="text-gray-900 text-opacity-80 backdrop-blur-md hover:underline"
+            >
+              Über uns
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/services"
+              className="text-gray-900 text-opacity-80 backdrop-blur-md hover:underline"
+            >
+              Services
+            </Link>
+          </li>
+        </ul>
+      </div>
     </nav>
   );
 }

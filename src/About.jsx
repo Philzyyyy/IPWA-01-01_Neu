@@ -10,6 +10,11 @@ const About = () => {
         Unternehmen und Privatpersonen bei der Erfassung und Analyse ihres
         CO₂-Fußabdrucks zu unterstützen.
       </p>
+      <img
+        src="Gruppenfoto_CarbonMetrics.png"
+        alt="Gruppenfoto des CarbonMetrics Teams"
+        className="mt-6"
+      />
     </div>
   );
 };

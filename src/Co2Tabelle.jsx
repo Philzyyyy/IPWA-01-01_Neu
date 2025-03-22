@@ -44,6 +44,12 @@ const data = [
 function Co2Table() {
   const [search, setSearch] = useState("");
   const [sortOrder, setSortOrder] = useState("asc"); // Standard: aufsteigend
+  const [activeButton, setActiveButton] = useState("asc"); // Standardmäßig "asc" aktiv
+
+  const handleSort = (order) => {
+    setSortOrder(order);
+    setActiveButton(order); // Speichert den aktiven Button
+  };
 
   const filteredData = data
     .filter(
@@ -59,7 +65,7 @@ function Co2Table() {
 
   return (
     <div className="max-w-3xl mx-auto p-6">
-      <h2 className="text-2xl font-bold mb-4 text-center text-gray-700">
+      <h2 className="text-2xl font-bold mb-12 text-center text-gray-700">
         CO₂-Emissionen nach Ländern oder Unternehmen
       </h2>
 
@@ -67,7 +73,7 @@ function Co2Table() {
       <input
         type="text"
         placeholder="Land oder Unternehmen durchsuchen..."
-        className="w-full p-2 border border-gray-300 rounded-lg mb-4"
+        className="w-full p-2 border border-gray-300 rounded-lg mb-12"
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />
@@ -75,14 +81,22 @@ function Co2Table() {
       {/* Sortier-Buttons */}
       <div className="flex justify-center mb-4">
         <button
-          className="px-4 py-2 mx-2 bg-blue-500 text-white rounded-lg hover:bg-blue-700"
-          onClick={() => setSortOrder("asc")}
+          className={`px-4 py-2 mx-2 border rounded-lg ${
+            activeButton === "asc"
+              ? "bg-gray-500 text-white"
+              : "bg-white text-black border-gray-300"
+          }`}
+          onClick={() => handleSort("asc")}
         >
           A-Z (Land)
         </button>
         <button
-          className="px-4 py-2 mx-2 bg-red-500 text-white rounded-lg hover:bg-red-700"
-          onClick={() => setSortOrder("desc")}
+          className={`px-4 py-2 mx-2 border rounded-lg ${
+            activeButton === "desc"
+              ? "bg-gray-500 text-white"
+              : "bg-white text-black border-gray-300"
+          }`}
+          onClick={() => handleSort("desc")}
         >
           Z-A (Land)
         </button>
