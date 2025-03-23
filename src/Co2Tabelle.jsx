@@ -65,7 +65,7 @@ function Co2Table() {
 
   return (
     <div className="max-w-3xl mx-auto p-6">
-      <h2 className="text-2xl font-bold mb-12 text-center text-gray-700">
+      <h2 className="text-2xl font-bold mb-12 text-center text-gray-900 text-opacity-80 backdrop-blur-md">
         CO₂-Emissionen nach Ländern oder Unternehmen
       </h2>
 
@@ -79,11 +79,11 @@ function Co2Table() {
       />
 
       {/* Sortier-Buttons */}
-      <div className="flex justify-center mb-4">
+      <div className="flex justify-center mb-4 text-gray-900 text-opacity-80 backdrop-blur-md">
         <button
           className={`px-4 py-2 mx-2 border rounded-lg ${
             activeButton === "asc"
-              ? "bg-gray-500 text-white"
+              ? "bg-gray-900 text-white"
               : "bg-white text-black border-gray-300"
           }`}
           onClick={() => handleSort("asc")}
@@ -93,7 +93,7 @@ function Co2Table() {
         <button
           className={`px-4 py-2 mx-2 border rounded-lg ${
             activeButton === "desc"
-              ? "bg-gray-500 text-white"
+              ? "bg-gray-900 text-white"
               : "bg-white text-black border-gray-300"
           }`}
           onClick={() => handleSort("desc")}
@@ -106,7 +106,7 @@ function Co2Table() {
       <div className="overflow-x-auto">
         <table className="w-full border-collapse border border-gray-300 shadow-lg">
           <thead>
-            <tr className="bg-gray-200 text-gray-700">
+            <tr className="bg-gray-200 text-gray-900">
               <th className="p-3 border">Land</th>
               <th className="p-3 border">CO₂-Emissionen (Mt)</th>
               <th className="p-3 border">Unternehmen</th>
