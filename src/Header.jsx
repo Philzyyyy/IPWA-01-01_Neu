@@ -4,11 +4,10 @@ function Header() {
   return (
     <header className="bg-gray-900 bg-opacity-80 backdrop-blur-md text-white py-4 shadow-md">
       <div className="container flex items-center px-6">
-        {/* Logo und Titel */}
         <div className="flex items-center gap-8">
           <Link to="/">
             <img
-              src="Frame 2.svg"
+              src="CarbonMetrics_Logo.svg"
               alt="CarbonMetrics Logo"
               className="h-16 w-auto transition-transform duration-200 hover:scale-110"
             />

@@ -4,8 +4,8 @@ import Navigation from "./Navigation";
 import Header from "./Header";
 import Footer from "./Footer";
 import Impressum from "./Impressum";
-import About from "./About"; // Neue Seite "Über uns"
-import Services from "./Services"; // Neue Seite "Services"
+import About from "./About";
+import Services from "./Services";
 
 function App() {
   return (
@@ -14,7 +14,6 @@ function App() {
         <Header />
         <Navigation />
 
-        {/* Hauptinhalt füllt den verfügbaren Platz */}
         <main className="flex-1 container mx-auto p-4">
           <Routes>
             <Route path="/" element={<Co2Table />} />

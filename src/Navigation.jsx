@@ -2,13 +2,10 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 function Navigation() {
-  const [direction, setDirection] = useState("ltr"); // Standard: LTR
+  const [direction, setDirection] = useState("ltr");
 
   useEffect(() => {
-    // Browsersprache abrufen (z. B. "ar" für Arabisch)
     const userLang = "navigator.language || navigator.userLanguage;";
-
-    // RTL-Sprachen definieren
     const rtlLanguages = ["ar", "he", "fa", "ur"];
     if (rtlLanguages.some((lang) => userLang.startsWith(lang))) {
       setDirection("rtl");

@@ -43,12 +43,12 @@ const data = [
 
 function Co2Table() {
   const [search, setSearch] = useState("");
-  const [sortOrder, setSortOrder] = useState("asc"); // Standard: aufsteigend
-  const [activeButton, setActiveButton] = useState("asc"); // Standardmäßig "asc" aktiv
+  const [sortOrder, setSortOrder] = useState("asc");
+  const [activeButton, setActiveButton] = useState("asc");
 
   const handleSort = (order) => {
     setSortOrder(order);
-    setActiveButton(order); // Speichert den aktiven Button
+    setActiveButton(order);
   };
 
   const filteredData = data
@@ -68,8 +68,6 @@ function Co2Table() {
       <h2 className="text-2xl font-bold mb-12 text-center text-gray-900 text-opacity-80 backdrop-blur-md">
         CO₂-Emissionen nach Ländern oder Unternehmen
       </h2>
-
-      {/* Filter-Input */}
       <input
         type="text"
         placeholder="Land oder Unternehmen durchsuchen..."
@@ -78,7 +76,6 @@ function Co2Table() {
         onChange={(e) => setSearch(e.target.value)}
       />
 
-      {/* Sortier-Buttons */}
       <div className="flex justify-center mb-4 text-gray-900 text-opacity-80 backdrop-blur-md">
         <button
           className={`px-4 py-2 mx-2 border rounded-lg ${
@@ -102,7 +99,6 @@ function Co2Table() {
         </button>
       </div>
 
-      {/* Tabelle */}
       <div className="overflow-x-auto">
         <table className="w-full border-collapse border border-gray-300 shadow-lg">
           <thead>
